@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Chat</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js" defer></script>
+</head>
+<body>
+  <div class="chat-card">
+    <header class="chat-header">
+      <div class="status-indicator"></div>
+      <h2>Live Connect</h2>
+      <button id="connect-btn">Connect</button>
+    </header>
+
+    <div id="message-container" class="message-container">
+      <!-- Messages appear here dynamically -->
+    </div>
+
+    <form id="chat-form" class="chat-input-area">
+      <label for="image-input" class="icon-btn" title="Send Image">
+        📷
+        <input type="file" id="image-input" accept="image/*" hidden>
+      </label>
+      
+      <button type="button" id="mic-btn" class="icon-btn" title="Record Voice">🎙️</button>
+      
+      <input type="text" id="text-input" placeholder="Type a message..." autocomplete="off">
+      <button type="submit" class="send-btn">Send</button>
+    </form>
+  </div>
+</body>
+</html>
